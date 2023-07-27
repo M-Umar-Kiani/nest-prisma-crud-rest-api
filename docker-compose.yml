@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  dev-db:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: umar
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: mydb
+    networks:
+      - backend_nest
+networks:
+  backend_nest:
